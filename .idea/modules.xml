@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/alura+oracle.iml" filepath="$PROJECT_DIR$/.idea/alura+oracle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/musica/musica.iml" filepath="$PROJECT_DIR$/musica/musica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primerprograma/primerprograma.iml" filepath="$PROJECT_DIR$/primerprograma/primerprograma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recomendador multimedia/recomendador multimedia.iml" filepath="$PROJECT_DIR$/recomendador multimedia/recomendador multimedia.iml" />
+    </modules>
+  </component>
+</project>
