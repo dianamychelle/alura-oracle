@@ -5,6 +5,11 @@ import com.aluracursos.screenmacth.calculos.Clasificable;
 public class Pelicula extends Titulo implements Clasificable {
     private String director;
 
+    //Constructor de la clase madre,definido en titulo
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
+
     public String getDirector() {
         return director;
     }
@@ -16,5 +21,10 @@ public class Pelicula extends Titulo implements Clasificable {
     @Override
     public int getClasificacion() {
         return (int) (calculaMedia() / 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula:"+this.getNombre() +"("+getFechaDeLanzamiento()+")";
     }
 }

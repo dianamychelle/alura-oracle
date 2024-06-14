@@ -4,10 +4,12 @@ import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -29,8 +31,7 @@ public class Principal {
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix");
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionEnMinutos(180);
 
@@ -50,6 +51,29 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
 
         filtroRecomendacion.filtra(episodio);
+
+        Pelicula peliculaDeDiana = new Pelicula("El castillo vagabundo");
+        peliculaDeDiana.setDuracionEnMinutos(180);
+        peliculaDeDiana.setFechaDeLanzamiento(2004);
+
+        //Constructor
+        Pelicula peliculaDeMich = new Pelicula("Le silence de la mer");
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<Pelicula>();
+        listaDePeliculas.add(peliculaDeDiana);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+        System.out.println("Tamanio de la lista:"+listaDePeliculas.size());
+        System.out.println("Primera pelicula del array:"+listaDePeliculas.get(0).toString());
+        System.out.println("Todas las peliculas:"+listaDePeliculas.toString());
+
+
+
+
+
+
+
+
 
 
 
