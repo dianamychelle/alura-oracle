@@ -10,6 +10,7 @@ public class Pelicula extends Titulo implements Clasificable {
         super(nombre, fechaDeLanzamiento);
     }
 
+    //GETTERS AND SETTERS
     public String getDirector() {
         return director;
     }

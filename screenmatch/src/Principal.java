@@ -9,8 +9,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto",2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -22,17 +21,14 @@ public class Principal {
         System.out.println(miPelicula.calculaMedia());
         System.out.println("Média de evaluaciones de la película: " +miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragón");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragón",2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula("Matrix");
-        otraPelicula.setFechaDeLanzamiento(1998);
+        Pelicula otraPelicula = new Pelicula("Matrix",1998);
         otraPelicula.setDuracionEnMinutos(180);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -52,12 +48,11 @@ public class Principal {
 
         filtroRecomendacion.filtra(episodio);
 
-        Pelicula peliculaDeDiana = new Pelicula("El castillo vagabundo");
+        Pelicula peliculaDeDiana = new Pelicula("El castillo vagabundo",2004);
         peliculaDeDiana.setDuracionEnMinutos(180);
-        peliculaDeDiana.setFechaDeLanzamiento(2004);
 
         //Constructor
-        Pelicula peliculaDeMich = new Pelicula("Le silence de la mer");
+        Pelicula peliculaDeMich = new Pelicula("Le silence de la mer",2001);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<Pelicula>();
         listaDePeliculas.add(peliculaDeDiana);
