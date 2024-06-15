@@ -1,10 +1,11 @@
+package com.aluracursos.principal;
+
 import com.aluracursos.screenmacth.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmacth.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Principal {
