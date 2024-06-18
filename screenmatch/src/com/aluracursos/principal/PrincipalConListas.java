@@ -46,9 +46,13 @@ public class PrincipalConListas {
         listaDeArtistas.add("Penelope Cruz");
         listaDeArtistas.add("Tony Banderas");
         listaDeArtistas.add("Ricardo Darin");
+        System.out.println("Lista de artista NO ordenada"+listaDeArtistas);
 
         Collections.sort(listaDeArtistas);
-        System.out.println("Lista de artista NO ordenada"+listaDeArtistas);
+        System.out.println("Lista de artista ordenada"+listaDeArtistas);
+
+        Collections.sort(lista);
+        System.out.println("Titulos ordenados"+lista);
 
 
 
