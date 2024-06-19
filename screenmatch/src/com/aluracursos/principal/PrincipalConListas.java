@@ -6,6 +6,7 @@ import com.aluracursos.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -42,6 +43,7 @@ public class PrincipalConListas {
             }
         }
         //ArrayList de tipo String + Nombre = new ArrayList<>()
+        //Ordenamiento de array de artistas
         ArrayList<String> listaDeArtistas = new ArrayList<>();
         listaDeArtistas.add("Penelope Cruz");
         listaDeArtistas.add("Tony Banderas");
@@ -51,8 +53,15 @@ public class PrincipalConListas {
         Collections.sort(listaDeArtistas);
         System.out.println("Lista de artista ordenada"+listaDeArtistas);
 
+        //Ordenamiento de array de titulos por NOMBRE
         Collections.sort(lista);
         System.out.println("Titulos ordenados"+lista);
+
+        //Ordenamiento de array de titulos por FECHA LANZAMIENTO
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista ordenada por fecha:"+lista);
+
+
 
 
 
