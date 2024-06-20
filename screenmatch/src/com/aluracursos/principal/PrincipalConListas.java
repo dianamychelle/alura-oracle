@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import java.util.List;
+
 public class PrincipalConListas {
     public static void main(String[] args) {
         //1
@@ -22,7 +24,7 @@ public class PrincipalConListas {
         //4
         Serie casaDragon = new Serie("La casa del dragón",2022);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(peliculaDeDiana);
         lista.add(miPelicula);
         lista.add(otraPelicula);
