@@ -40,12 +40,14 @@ public class PrincipalConBusqueda {
 
         try{
             Titulo miTitulo = new Titulo(miTituloOmdb);
-            System.out.println(miTitulo);
+            System.out.println("Titulo covertido" + miTitulo);
         }catch(NumberFormatException e){
             System.out.println("Ocurio un error");
             System.out.println(e.getMessage());
+        }finally {
+            System.out.println("Finalizo ejecucion");
         }
-        System.out.println("Finalizo ejecucion");
+
 
 
 
