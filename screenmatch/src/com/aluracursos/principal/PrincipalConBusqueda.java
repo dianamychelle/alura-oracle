@@ -20,39 +20,38 @@ public class PrincipalConBusqueda {
 
         String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=f3eb0070";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(direccion))
-                .build();
-
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
-
-        //------------------------------------De Json a Clase
-        String json = response.body();
-        System.out.println(response.body());
-        //
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .create();
-        TituloOmdb miTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-        System.out.println(miTituloOmdb);
-
         try{
-            Titulo miTitulo = new Titulo(miTituloOmdb);
-            System.out.println("Titulo convertido: " + miTitulo);
+
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(direccion))
+                    .build();
+
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+
+            //------------------------------------De Json a Clase
+            String json = response.body();
+            System.out.println(response.body());
+            //
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
+            TituloOmdb miTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            System.out.println(miTituloOmdb);
+
+
+                Titulo miTitulo = new Titulo(miTituloOmdb);
+                System.out.println("Titulo convertido: " + miTitulo);
         }catch(NumberFormatException e){
-            System.out.println("Ocurio un error");
-            System.out.println(e.getMessage());
-        }finally {
-            System.out.println("Finalizo ejecucion");
+                System.out.println("Ocurio un error");
+                System.out.println(e.getMessage());
+        }catch(IllegalArgumentException e){
+            System.out.println("Ocurio un error en la URI verifica direccion");
+
         }
 
-
-
-
-
-
+        System.out.println("Finalizo ejecucion");
 
     }
 }
