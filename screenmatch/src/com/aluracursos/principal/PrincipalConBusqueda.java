@@ -18,7 +18,9 @@ public class PrincipalConBusqueda {
         System.out.println("Escribe nombre de la pelicula:");
         var busqueda = scanner.nextLine();
 
-        String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=f3eb0070";
+        String direccion = "https://www.omdbapi.com/?t="+
+                busqueda.replace(" ","+")+
+                "&apikey=f3eb0070";
 
         try{
 
@@ -48,7 +50,6 @@ public class PrincipalConBusqueda {
                 System.out.println(e.getMessage());
         }catch(IllegalArgumentException e){
             System.out.println("Ocurio un error en la URI verifica direccion");
-
         }catch(Exception e){
             System.out.println("Gracias por la compresion, se ha detenido el programa. Ocurrio un error inesperado");
         }
