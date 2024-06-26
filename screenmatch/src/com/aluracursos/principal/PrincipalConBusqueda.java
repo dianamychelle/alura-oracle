@@ -1,4 +1,5 @@
 package com.aluracursos.principal;
+import com.aluracursos.screenmatch.exception.ErrorEnConversionDeDuracionException;
 import com.aluracursos.screenmatch.modelos.Titulo;
 import com.aluracursos.screenmatch.modelos.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
@@ -50,8 +51,8 @@ public class PrincipalConBusqueda {
                 System.out.println(e.getMessage());
         }catch(IllegalArgumentException e){
             System.out.println("Ocurio un error en la URI verifica direccion");
-        }catch(Exception e){
-            System.out.println("Gracias por la compresion, se ha detenido el programa. Ocurrio un error inesperado");
+        }catch(ErrorEnConversionDeDuracionException e){
+            System.out.println(e.getMessage());
         }
 
         System.out.println("Finalizo ejecucion");
