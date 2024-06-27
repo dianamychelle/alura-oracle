@@ -47,15 +47,15 @@ public class PrincipalConBusqueda {
                 Titulo miTitulo = new Titulo(miTituloOmdb);
                 System.out.println("Titulo convertido: " + miTitulo);
         }catch(NumberFormatException e){
-                System.out.println("Ocurio un error");
+                System.out.println("Ocurrió un error");
                 System.out.println(e.getMessage());
         }catch(IllegalArgumentException e){
-            System.out.println("Ocurio un error en la URI verifica direccion");
+            System.out.println("Ocurrió un error en la URI");
         }catch(ErrorEnConversionDeDuracionException e){
             System.out.println(e.getMessage());
         }
 
-        System.out.println("Finalizo ejecucion");
+        System.out.println("Finalizó la ejecucion");
 
     }
 }

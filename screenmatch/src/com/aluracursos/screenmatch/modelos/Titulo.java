@@ -27,7 +27,7 @@ public class Titulo implements Comparable<Titulo>{
         this.nombre = miTituloOmdb.title();
         this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.year());
         if(miTituloOmdb.runtime().contains("N/A")){
-            throw new ErrorEnConversionDeDuracionException("No se pudo cnvertir la duración, contiene un N/A");
+            throw new ErrorEnConversionDeDuracionException("No se pudo convertir la duración, contiene un N/A");
 
         }
         this.duracionEnMinutos = Integer.valueOf(
