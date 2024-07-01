@@ -15,10 +15,10 @@ public class Main {
             Pelicula pelicula = consulta.buscaPelicula(numeroDePelicula);
             System.out.println(pelicula);
         }catch (NumberFormatException e){
-            System.out.println("Numero no encontrado"+e.getMessage());
+            System.out.println("Numero no encontrado dentro de la API"+e.getMessage());
         }catch (RuntimeException e){
             System.out.println(e.getMessage());
-            System.out.println("Finalizando aplicación.");
+            System.out.println("Finalizando aplicación.Hasta pronto");
         }
 
         }
