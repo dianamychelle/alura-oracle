@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -14,9 +15,13 @@ public class Main {
             var numeroDePelicula = Integer.valueOf(sc.nextLine());
             Pelicula pelicula = consulta.buscaPelicula(numeroDePelicula);
             System.out.println(pelicula);
+
+            GeneradorDeArchivo generador = new GeneradorDeArchivo();
+            generador.guardarJson(pelicula);
+
         }catch (NumberFormatException e){
             System.out.println("Numero no encontrado dentro de la API"+e.getMessage());
-        }catch (RuntimeException e){
+        }catch (RuntimeException | IOException e){
             System.out.println(e.getMessage());
             System.out.println("Finalizando aplicación.Hasta pronto");
         }
