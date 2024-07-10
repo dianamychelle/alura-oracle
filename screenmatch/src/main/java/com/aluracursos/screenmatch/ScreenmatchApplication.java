@@ -12,7 +12,6 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		//System.out.println("Este es mi primer Adios mundo en Spring.Bienvenido. ");
 		var consumoApi = new ConsumoAPI();
 		var json = consumoApi.obtenerDatos("https://www.omdbapi.com/?t=Game+of+Thrones&apikey=f3eb0070");
-
 		System.out.println(json);
 
 	}
