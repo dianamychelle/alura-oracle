@@ -72,18 +72,26 @@ public class Principal {
         System.out.println("Top 5 episodios");
         datosEpisodios.stream()
                 .filter(e -> !e.evaluacion().equalsIgnoreCase("N/A"))
+                .peek(e -> System.out.println("Primer filtro N/A" +e))
                 .sorted(Comparator.comparing(DatosEpisodio::evaluacion).reversed())
+                .peek(e -> System.out.println("Segundo filtro Mayor a menor" +e))
                 .limit(5)
+                .map(e -> e.titulo().toUpperCase())
+                .peek(e -> System.out.println("Tercer filtro mayusculas" +e))
                 .forEach(System.out::println);
+
 
         //Convirtiendo los datos a una lista del tipo episodio
         List<Episodio> episodios = temporadas.stream()
                 .flatMap(t -> t.episodios().stream()
                         .map(d -> new Episodio(t.numero(),d)))
                 .collect(Collectors.toList());
-
+        /*
         episodios.forEach(System.out::println);
+        */
 
+
+        /*
         // Busqueda de episodios a partir de x año
         System.out.println("a partir de que año deseas ver los episodios?");
         var fecha = teclado.nextInt();
@@ -99,6 +107,7 @@ public class Principal {
                                 " Episodio: " + e.getTitulo() +
                                 " Fecha de Lanzamiento: " + e.getFechaDeLanzamiento().format(dtf)
                 ));
+        */
 
 
 
